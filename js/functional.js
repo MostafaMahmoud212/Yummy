@@ -11,7 +11,7 @@ export  class HtmlFunctional{
 		let categories = JSON.parse(data)['categories']
 		for(let i = 0;i < categories.length;i++){
 			category_list += `
-				<div id="` + categories[i]['idCategory'] + `" onclick="api_fetcher.Filter.filterByCategory('` + categories[i]['strCategory'] + `',(data) => {html_handler.categoryHandler2(data)})" class="col-md-3 col-sm-12 overflow-hidden ">
+				<div id="` + categories[i]['idCategory'] + `" onclick="api_fetcher.Filter.filterByCategory('` + categories[i]['strCategory'] + `',(data) => {html_handler.categoryHandler2(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden ">
 					<div class="team-box my-4 overflow-hidden">
 						<div class="card">
 							<div class="team_image position-relative">
@@ -33,7 +33,7 @@ export  class HtmlFunctional{
 		let items = JSON.parse(data)['meals']
 		for(let i = 0; i < items.length; i++){
 			menue += `
-				<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+				<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 					<div class="team-box my-4 overflow-hidden">
 						<div class="card">
 							<div class="team_image position-relative">
@@ -57,7 +57,7 @@ export  class HtmlFunctional{
 					<img class="w-100 rounded-3" src="` + item['strMealThumb'] + `" alt="">
 					<h2> ${item['strMeal']}</h2>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 mb-4">
 					<h2>Instructions</h2>
 					<p>` + item['strInstructions'] + `</p>
 					<h3><span class="fw-bolder">Area : </span>` + item['strArea'] + `</h3>
@@ -116,7 +116,7 @@ export  class HtmlFunctional{
 				let items = JSON.parse(data)['meals']
 				for(let i = 0; i < items.length; i++){
 					menue += `
-						<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+						<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 							<div class="team-box my-4 overflow-hidden">
 								<div class="card">
 									<div class="team_image position-relative">
@@ -142,7 +142,7 @@ export  class HtmlFunctional{
 				let items = JSON.parse(data)['meals']
 				for(let i = 0; i < items.length; i++){
 					menue += `
-						<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+						<div id="` + items[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + items[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 							<div class="team-box my-4 overflow-hidden">
 								<div class="card">
 									<div class="team_image position-relative">
@@ -166,7 +166,7 @@ export  class HtmlFunctional{
 		let categories = JSON.parse(data)['meals']
 		for(let i = 0; i < categories.length; i++){
 			category_list += `
-				<div id="` + categories[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + categories[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+				<div id="` + categories[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + categories[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 						<div class="team-box my-4 overflow-hidden">
 							<div class="card">
 								<div class="team_image position-relative">
@@ -189,7 +189,7 @@ export  class HtmlFunctional{
 		let areas = JSON.parse(data)['meals']
 		for(let i = 0; i < areas.length; i++){
 			area_list += `
-				<div class="col-md-3" onclick="api_fetcher.Filter.filterByArea('` + areas[i]['strArea'] + `',(data) => {html_handler.areaFilterHandler(data)})">
+				<div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3"  onclick="api_fetcher.Filter.filterByArea('` + areas[i]['strArea'] + `',(data) => {html_handler.areaFilterHandler(data)})">
 					<div class="rounded-2 text-center cursor-pointer">
 						<i class="fa-solid fa-house-laptop fa-4x"></i>
 						<h3>` + areas[i]['strArea'] + `</h3>
@@ -205,7 +205,7 @@ export  class HtmlFunctional{
 		let areas = JSON.parse(data)['meals']
 		for(let i = 0; i < areas.length; i++){
 			area_list += `
-				<div id="` + areas[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + areas[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+				<div id="` + areas[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + areas[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 					<div class="team-box my-4 overflow-hidden">
 						<div class="card">
 							<div class="team_image position-relative">
@@ -231,7 +231,7 @@ export  class HtmlFunctional{
 			if(ingredients[i]['strDescription'] === null || ingredients[i]['strDescription'] === '')
 				continue
 			ingredient_list += `
-				<div onclick="api_fetcher.Filter.filterByIngredient('` + ingredients[i]['strIngredient'] + `',(data) => {html_handler.areaFilterHandler(data)})" class="col-md-3">
+				<div onclick="api_fetcher.Filter.filterByIngredient('` + ingredients[i]['strIngredient'] + `',(data) => {html_handler.areaFilterHandler(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3">
 					<div class="rounded-2 text-center cursor-pointer">
 						<i class="fa-solid fa-drumstick-bite fa-4x"></i>
 						<h3>` + ingredients[i]['strIngredient'] + `</h3>
@@ -250,7 +250,7 @@ export  class HtmlFunctional{
 		let ingredients_meals = JSON.parse(data)['meals']
 		for(let i = 0; i < ingredients_meals.length; i++){
 			ingredient_meals_list += `
-				<div id="` + ingredients_meals[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + ingredients_meals[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-md-3 col-sm-12 overflow-hidden rounded-2">
+				<div id="` + ingredients_meals[i]['idMeal'] + `" onclick="api_fetcher.Getter.getMealDetailsByID(` + ingredients_meals[i]['idMeal'] + `,(data) => {html_handler.MealFilterById(data)})" class="col-12 col-md-6 col-lg-4 col-xl-3 overflow-hidden rounded-2">
 					<div class="team-box my-4 overflow-hidden">
 						<div class="card">
 							<div class="team_image position-relative">

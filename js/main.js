@@ -18,7 +18,7 @@ function initializeCategories() {
 function initializeAreas() {
   api_fetcher.Getter.getAreas((data) => {
     html_handler.AreaHandler(data);
-  });
+  }); 
 }
 function initializeIngredients() {
   api_fetcher.Getter.getIngredients((data) => {
